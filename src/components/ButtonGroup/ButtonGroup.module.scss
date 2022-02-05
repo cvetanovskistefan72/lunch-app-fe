@@ -1,0 +1,60 @@
+@import "../../scss/variables.scss";
+
+.root {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px 25px 0px 25px;
+  .create {
+    background-color: $dark-blue;
+    color: $white;
+    margin: 5px;
+    padding: 10px 15px 10px 15px;
+    font-size: 1.2rem;
+    border: none;
+    width: 200px;
+    border-radius: 7px;
+    cursor: pointer;
+    svg {
+      opacity: 0;
+      margin-left: -5px;
+    }
+  }
+  .create:hover svg {
+    opacity: 1;
+    margin-left: 5px;
+    transition: 0.2s ease-in-out;
+  }
+  .create:not(:hover) svg {
+    opacity: 0;
+    margin-left: -20px;
+    transition: 0.2s ease-in-out;
+  }
+
+  .new {
+    background-color: $green;
+    color: $white;
+    font-weight: 400;
+    width: 200px;
+    margin: 5px;
+    padding: 10px 15px 10px 15px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    svg {
+      opacity: 0;
+      margin-left: -5px;
+    }
+  }
+  .new:hover svg {
+    opacity: 1;
+    margin-left: 5px;
+    transition: 0.2s ease-in-out;
+  }
+  .new:not(:hover) svg {
+    opacity: 0;
+    margin-left: -20px;
+    transition: 0.2s ease-in-out;
+  }
+}

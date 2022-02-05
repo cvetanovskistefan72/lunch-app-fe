@@ -1,0 +1,29 @@
+@import "../../scss/variables.scss";
+
+.root {
+  padding: 25px 25px 5px 25px;
+  .section {
+    padding: 0px 10px 0px 10px;
+    .title {
+      h1 {
+        font-size: 2.5rem;
+        margin: 0px;
+        font-family: sans-serif;
+        color: $dark-blue;
+      }
+    }
+    .description {
+      margin-top: 15px;
+      span {
+        font-family: sans-serif;
+        font-size: 1.5rem;
+        color: $dark-blue;
+      }
+    }
+  }
+  hr {
+    background-color: $dark-blue;
+    color: $dark-blue;
+    border-color: $dark-blue;
+  }
+}

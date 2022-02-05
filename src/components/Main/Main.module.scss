@@ -1,11 +1,13 @@
 @import "../../scss/variables.scss";
 
 .root{
-  background-color: #ffffff;
   margin-top: 1rem;
-  width: 60%;
+  width: 80%;
   height: 75%;
   border-radius: 0.5rem;
   display: flex;
+  justify-content: space-between;
+
+  
 
 }

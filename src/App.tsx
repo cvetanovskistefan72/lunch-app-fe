@@ -10,7 +10,7 @@ function App() {
       <BrowserRouter>
           <Routes>
             <Route path="/" element={<LandingPage/>} />
-            <Route path="/dashboard" element={<Dashboard/>}/>
+            <Route path="/randomLunch" element={<Dashboard/>}/>
           </Routes>
       </BrowserRouter>
     </div>

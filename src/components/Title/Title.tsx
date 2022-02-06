@@ -1,12 +1,15 @@
 import React from "react";
+import { Lunch } from "../../models/app";
 import styles from "./Title.module.scss";
 
-interface Props {}
+interface Props {
+  randomLunch: Lunch;
+}
 
-const Title: React.FC<Props> = () => {
+const Title: React.FC<Props> = ({ randomLunch }) => {
   return (
     <div className={styles.root}>
-      <h5>Макарони со сирење, хопла, кечап и сирење</h5>
+      <h5>{randomLunch.title}</h5>
       <hr />
     </div>
   );

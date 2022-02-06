@@ -1,26 +1,16 @@
 import React from "react";
+import { Lunch } from "../../models/app";
 import styles from "./Ingredients.module.scss";
 
-type Props = {};
+interface Props {
+  randomLunch: Lunch;
+}
 
-const Ingredients: React.FC<Props> = () => {
-  const list = [
-    "Домат",
-    "Мајонез",
-    "Кечап",
-    "Салама",
-    "Кашкавал",
-    "Сирење",
-    "Морков",
-    "Ајвар",
-    "Павлака",
-    "Магдонос",
-    "Кари сос",
-  ];
+const Ingredients: React.FC<Props> = ({ randomLunch }) => {
   return (
     <div className={styles.root}>
-      {list.map((val) => (
-        <div className={styles.ingredient}>{val}</div>
+      {randomLunch?.ingredients.map(({ title },i) => (
+        <div key={i} className={styles.ingredient}>{title}</div>
       ))}
     </div>
   );

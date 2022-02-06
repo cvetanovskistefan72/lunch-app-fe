@@ -1,17 +1,20 @@
 import React from "react";
+import { Lunch } from "../../models/app";
 import Left from "../Left/Left";
 import Reviews from "../Reviews/Reviews";
 import Right from "../Right/Right";
 import styles from "./Main.module.scss";
 
-interface Props {}
+interface Props {
+  randomLunch: Lunch;
+}
 
-const Main: React.FC<Props> = () => {
+const Main: React.FC<Props> = ({ randomLunch }) => {
   return (
     <div className={styles.root}>
-      <Left />
-      <Right/>
-      <Reviews/>
+      <Left randomLunch={randomLunch} />
+      <Right randomLunch={randomLunch} />
+      <Reviews />
     </div>
   );
 };

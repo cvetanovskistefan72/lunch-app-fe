@@ -1,16 +1,17 @@
-import React, { useEffect } from 'react';
-import styles from './LandingPage.module.scss';
+import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUtensils } from "@fortawesome/free-solid-svg-icons";
-import { Link } from 'react-router-dom'
-interface Props {
-  
-}
+import { useDispatch, useSelector } from "react-redux";
+import { actions } from "../store/lunches/slice";
+import { Link } from "react-router-dom";
+import styles from "./LandingPage.module.scss";
+interface Props {}
 
-const LandingPage:React.FC<Props> = () => {
+const LandingPage: React.FC<Props> = () => {
+
   return (
     <div className={styles.root}>
-      <Link to="/dashboard">
+      <Link to="/randomLunch">
         <button className="cover-btn">
           <span>Генерирај</span>
           <FontAwesomeIcon className="cover-svg" icon={faUtensils} />
@@ -18,8 +19,6 @@ const LandingPage:React.FC<Props> = () => {
       </Link>
     </div>
   );
-}
-
-
+};
 
 export default LandingPage;

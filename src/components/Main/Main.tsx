@@ -7,13 +7,14 @@ import styles from "./Main.module.scss";
 
 interface Props {
   randomLunch: Lunch;
+  getRandomLunch: Function;
 }
 
-const Main: React.FC<Props> = ({ randomLunch }) => {
+const Main: React.FC<Props> = ({ randomLunch, getRandomLunch }) => {
   return (
     <div className={styles.root}>
       <Left randomLunch={randomLunch} />
-      <Right randomLunch={randomLunch} />
+      <Right randomLunch={randomLunch} getRandomLunch={getRandomLunch} />
       <Reviews />
     </div>
   );

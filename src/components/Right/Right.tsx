@@ -6,14 +6,15 @@ import Reciept from "../Reciept/Reciept";
 import styles from "./Right.module.scss";
 interface Props {
   randomLunch: Lunch;
+  getRandomLunch: Function;
 }
 
-const Right: React.FC<Props> = ({ randomLunch }) => {
+const Right: React.FC<Props> = ({ randomLunch, getRandomLunch }) => {
   return (
     <div className={styles.root}>
       <Description randomLunch={randomLunch} />
       <Reciept randomLunch={randomLunch} />
-      <ButtonGroup />
+      <ButtonGroup getRandomLunch={getRandomLunch} />
     </div>
   );
 };

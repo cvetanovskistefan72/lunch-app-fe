@@ -13,9 +13,14 @@ const Dashboard: React.FC<Props> = () => {
   const loading = useSelector(selectLoading);
   useEffect(() => {
     if (!randomLunch) {
-      dispatch(actions.getRandomLunch());
+      getRandomLunch()
     }
   }, []);
+
+
+  const getRandomLunch = () => {
+    dispatch(actions.getRandomLunch());
+  }
 
   if (loading)
     return (
@@ -23,10 +28,13 @@ const Dashboard: React.FC<Props> = () => {
         <Loading />
       </div>
     );
-
   return (
     <div className={styles.root}>
-      {randomLunch ? <Main randomLunch={randomLunch} /> : ""}
+      {randomLunch ? (
+        <Main randomLunch={randomLunch} getRandomLunch={getRandomLunch} />
+      ) : (
+        ""
+      )}
     </div>
   );
 
